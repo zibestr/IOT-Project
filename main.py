@@ -1,5 +1,5 @@
 import servers
-import webpanel
+from panel.main import *
 
 host = servers.SocketServer()
 http_server = servers.HTTPServer()
@@ -7,5 +7,5 @@ http_server = servers.HTTPServer()
 host.activate()
 http_server.activate()
 
-iot_panel = webpanel.WebSite()
+iot_panel = WebSite()
 iot_panel.start(servers.data)
